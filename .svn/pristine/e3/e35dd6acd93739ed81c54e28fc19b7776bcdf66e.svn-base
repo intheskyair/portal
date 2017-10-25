@@ -1,0 +1,10 @@
+@charset "utf-8";
+/**
+* <p>Copyright: ©2012 tohot Co., Ltd. All rights reserved</p>
+* <p>Title: 验证插件风格样式</p> 
+* <p>Description: 验证插件风格样式</p>
+* @author zhaof
+* @version 1.0 2012-7-19
+*/
+.jquery-validate-error{ background:url(images/error.png) no-repeat right center #fff; border:1px solid #FF7A54;}
+.jquery-validate-ok{ background:url(images/ok.png) no-repeat right center #fff;}

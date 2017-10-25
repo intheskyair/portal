@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>portal</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+  </filter>
+ 
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>*.action</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+	<listener>  
+     <listener-class>com.zqkj.bsm.system.action.session.SessionListener</listener-class>  
+    </listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>	
+
+     <servlet>
+		<servlet-name>ConfigServlet</servlet-name>
+		<servlet-class>
+			com.zqkj.bsm.init.ConfigServlet
+		</servlet-class>
+		<init-param>
+			<param-name>log4j</param-name>
+			<param-value>WEB-INF/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+		
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>
+			org.directwebremoting.servlet.DwrServlet
+		</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>crossDomainSessionSecurity</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>activeReverseAjaxEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	
+<!--	添加以下项 为轮询，注释以下项 为Comet	-->
+<!--		<init-param>-->
+<!--			<param-name>-->
+<!--				org.directwebremoting.extend.ServerLoadMonitor-->
+<!--			</param-name>-->
+<!--			<param-value>-->
+<!--				org.directwebremoting.impl.PollingServerLoadMonitor-->
+<!--			</param-value>-->
+<!--		</init-param>-->
+		<init-param>
+			<param-name>disconnectedTime</param-name>
+			<param-value>1000</param-value>
+		</init-param>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/dwr.xml</param-value>
+		</init-param>		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	   
+    
+   <!-- ======== Axis相关Servlet ======== -->
+   <servlet>
+	<servlet-name>AxisServlet</servlet-name>
+	<servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
+	<!-- 关闭IE中浏览服务列表 -->
+	<init-param>
+	<param-name>axis.disableServiceList</param-name>
+	<param-value>true</param-value>
+	</init-param>
+	<load-on-startup>4</load-on-startup>
+  </servlet>
+ 
+<!-- 启动、停止server以及重起、恢复服务控制台的servlet(开发模式下打开，产品模式下需要关闭 —— 取消axis.development.system参数即可)   -->
+<servlet>
+	<servlet-name>AdminServlet</servlet-name>
+	<servlet-class>org.apache.axis.transport.http.AdminServlet</servlet-class>
+	<init-param>
+	<param-name>axis.development.system</param-name>
+	<param-value>true</param-value>
+	</init-param>
+	<load-on-startup>100</load-on-startup>
+</servlet>
+ 
+<!-- 服务端使用Axis提供的Applet监控服务请求，服务响应数据需要的Servlet -->
+<servlet>
+	<servlet-name>SOAPMonitorService</servlet-name>
+	<servlet-class>org.apache.axis.monitor.SOAPMonitorService</servlet-class>
+	<init-param>
+	<param-name>SOAPMonitorPort</param-name>
+	<param-value>5001</param-value>
+	</init-param>
+	<load-on-startup>101</load-on-startup>
+</servlet>
+<!-- 服务列表servlet url-pattern(该mapping url-pattern对服务的部署，没什么影响) -->
+<servlet-mapping>
+	<servlet-name>AxisServlet</servlet-name>
+	<url-pattern>/AxisServlet</url-pattern>
+</servlet-mapping>
+ 
+<!-- 客户端访问服务的基本servlet url-pattern -->
+<servlet-mapping>
+<servlet-name>AxisServlet</servlet-name>
+<url-pattern>/services_2/*</url-pattern>
+</servlet-mapping>
+ 
+<!-- 映射监控Applet的servlet url-pattern -->
+<servlet-mapping>
+<servlet-name>SOAPMonitorService</servlet-name>
+<url-pattern>/SOAPMonitor</url-pattern>
+</servlet-mapping>
+ 
+<!-- 启动、停止server以及重起、恢复服务控制台的servlet url-pattern(开发模式下打开，产品模式下需要关闭) -->
+ <servlet-mapping>
+<servlet-name>AdminServlet</servlet-name>
+<url-pattern>/AdminServlet</url-pattern>
+</servlet-mapping> 
+<!-- 
+   <servlet>
+	<servlet-name>StoreServlet</servlet-name>
+	<servlet-class>
+		com.zqkj.bsm.store.inter.StoreServlet
+	</servlet-class>
+	<load-on-startup>5</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>StoreServlet</servlet-name>
+	<url-pattern>/store/*</url-pattern>
+</servlet-mapping>
+-->
+<!-- 上传文件 -->
+<servlet>
+  <servlet-name>UploadImage</servlet-name>
+  <servlet-class>com.zqkj.bsm.util.UploadImage</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>UploadImage</servlet-name>
+  <url-pattern>/uploadImage</url-pattern>
+</servlet-mapping>
+
+
+<!-- 当前可能需要处理的特殊扩展名 -->
+<mime-mapping>
+<extension>wsdl</extension>
+<mime-type>text/xml</mime-type>
+</mime-mapping>
+ 
+<mime-mapping>
+<extension>xsd</extension>
+<mime-type>text/xml</mime-type>
+</mime-mapping> 
+<session-config>
+ <session-timeout>1200</session-timeout>
+</session-config>
+<display-name>Java enterprise application platform</display-name>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		classpath*:/applicationContext.xml
+
+		classpath*:/applicationContext-snaker.xml
+		</param-value>
+	</context-param>
+	
+</web-app>

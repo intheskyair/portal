@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="app_preset_prof_preset_name">portal on Tomcat  7.x Launch Configuration</entry>
+<entry key="app_preset_prof_preset_filter_s"/>
+<entry key="app_preset_prof_preset_filter_p">com.cudatec.flow.app.action.*,
+com.cudatec.flow.app.dao.*,
+com.cudatec.flow.app.entity.*,
+com.cudatec.flow.app.service.*,
+com.cudatec.flow.app.web.taglibs.*,
+com.cudatec.flow.framework.*,
+com.cudatec.render.dao.*,
+com.cudatec.render.util.*,
+com.zqkj.bsm.action.*,
+com.zqkj.bsm.carmanager.action.*,
+com.zqkj.bsm.carmanager.dao.*,
+com.zqkj.bsm.chart.action.*,
+com.zqkj.bsm.chart.dao.*,
+com.zqkj.bsm.client.action.*,
+com.zqkj.bsm.client.dao.*,
+com.zqkj.bsm.client.tcpservice.*,
+com.zqkj.bsm.cluster.inter.*,
+com.zqkj.bsm.cluster.pdu.*,
+com.zqkj.bsm.dal.bean.*,
+com.zqkj.bsm.dal.client.*,
+com.zqkj.bsm.dal.dboper.*,
+com.zqkj.bsm.dwr.*,
+com.zqkj.bsm.email.*,
+com.zqkj.bsm.init.*,
+com.zqkj.bsm.log.action.*,
+com.zqkj.bsm.log.dao.*,
+com.zqkj.bsm.mzpc.action.*,
+com.zqkj.bsm.mzpc.dao.*,
+com.zqkj.bsm.recharge.action.*,
+com.zqkj.bsm.render.action.dao.*,
+com.zqkj.bsm.render.bean.*,
+com.zqkj.bsm.security.*,
+com.zqkj.bsm.slProject.action.*,
+com.zqkj.bsm.slProject.dao.*,
+com.zqkj.bsm.sms.*,
+com.zqkj.bsm.system.action.*,
+com.zqkj.bsm.thread.*,
+com.zqkj.bsm.util.*,
+com.zqkj.bsm.webservice.*</entry>
+<entry key="app_preset_prof_preset_alloc_p">10</entry>
+<entry key="app_preset_"/>
+<entry key="app_preset_prof_preset_samplingRefreshRate_s">1000</entry>
+<entry key="app_preset_prof_preset_stacks_p">false</entry>
+<entry key="app_preset_prof_preset_roots_p">com.cudatec.flow.app.action.**
+com.cudatec.flow.app.dao.**
+com.cudatec.flow.app.entity.**
+com.cudatec.flow.app.service.**
+com.cudatec.flow.app.web.taglibs.**
+com.cudatec.flow.framework.**
+com.cudatec.render.dao.**
+com.cudatec.render.util.**
+com.zqkj.bsm.action.**
+com.zqkj.bsm.carmanager.action.**
+com.zqkj.bsm.carmanager.dao.**
+com.zqkj.bsm.chart.action.**
+com.zqkj.bsm.chart.dao.**
+com.zqkj.bsm.client.action.**
+com.zqkj.bsm.client.dao.**
+com.zqkj.bsm.client.tcpservice.**
+com.zqkj.bsm.cluster.inter.**
+com.zqkj.bsm.cluster.pdu.**
+com.zqkj.bsm.dal.bean.**
+com.zqkj.bsm.dal.client.**
+com.zqkj.bsm.dal.dboper.**
+com.zqkj.bsm.dwr.**
+com.zqkj.bsm.email.**
+com.zqkj.bsm.init.**
+com.zqkj.bsm.log.action.**
+com.zqkj.bsm.log.dao.**
+com.zqkj.bsm.mzpc.action.**
+com.zqkj.bsm.mzpc.dao.**
+com.zqkj.bsm.recharge.action.**
+com.zqkj.bsm.render.action.dao.**
+com.zqkj.bsm.render.bean.**
+com.zqkj.bsm.security.**
+com.zqkj.bsm.slProject.action.**
+com.zqkj.bsm.slProject.dao.**
+com.zqkj.bsm.sms.**
+com.zqkj.bsm.system.action.**
+com.zqkj.bsm.thread.**
+com.zqkj.bsm.util.**
+com.zqkj.bsm.webservice.**
+</entry>
+<entry key="profiler.settings.instrument.empty.methods">false</entry>
+<entry key="myeclipse.profiling.mode">0</entry>
+<entry key="profiler.settings.istrument.getter.setter.methods">false</entry>
+<entry key="app_preset_prof_preset_samplingRate_s">100</entry>
+<entry key="app_preset_prof_preset_filterMode_s">true</entry>
+<entry key="app_preset_prof_preset_selector"/>
+<entry key="app_preset_prof_preset_refreshRate_s">1000</entry>
+<entry key="app_preset_prof_preset_runnables_p">true</entry>
+<entry key="app_preset_prof_preset_filterMode_p">false</entry>
+<entry key="app_preset_prof_preset_memoryMode_p">true</entry>
+</properties>

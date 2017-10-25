@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="../css/compart/common.css" />
+<div style="overflow: hidden;" >
+	<p class="btt">德的专项测评表</p>
+	<table class="table01" cellpadding="0" cellspacing="0">
+	  <tr>
+    <td colspan="16">姓名：<input type="text" style="border:none;border-bottom:#000 1px solid" />职务：<input type="text" style="border:none;border-bottom:#000 1px solid" /></td>
+  </tr>
+  <tr>
+    <td rowspan="2">评价<br/>类别</td>
+    <td colspan="2">理想信念</td>
+    <td colspan="2">政治纪律</td>
+    <td colspan="2">大局意识</td>
+    <td colspan="2">坚持原则</td>
+    <td colspan="2">履职尽责</td>
+    <td colspan="2">工作作风</td>
+    <td colspan="2">个人品行</td>
+  </tr>
+  <tr>
+    <td valign="top">政<br/>治<br/>不<br/>够<br/>坚<br/>定<br/>信<br/>念<br/>动<br/>摇</td>
+    <td valign="top">在<br/>公<br/>开<br/>场<br/>合<br/>发<br/>表<br/>不<br/>当<br/>言<br/>论</td>
+    <td valign="top">在<br/>干<br/>部<br/>选<br/>拔<br/>任<br/>用<br/>中<br/>跑<br/>官<br/>要<br/>官<br/>拉<br/>票<br/>贿<br/>选</td>
+    <td valign="top">在<br/>班<br/>子<br/>中<br/>闹<br/>不<br/>团<br/>结<br/>搞<br/>小<br/>团<br/>体<br/>小<br/>圈<br/>子<br/>拉<br/>帮<br/>结<br/>派</td>
+    <td valign="top">考<br/>虑<br/>个<br/>人<br/>利<br/>益<br/>较<br/>多<br/>不<br/>服<br/>从<br/>组<br/>织<br/>决<br/>定</td>
+    <td valign="top">回<br/>避<br/>矛<br/>盾<br/>和<br/>稀<br/>泥<br/>当<br/>老<br/>好<br/>人</td>
+    <td valign="top">凭<br/>个<br/>人<br/>好<br/>恶<br/>推<br/>荐<br/>使<br/>用<br/>干<br/>部<br/>任<br/>人<br/>唯<br/>亲</td>
+    <td valign="top">工<br/>作<br/>的<br/>主<br/>动<br/>性<br/>不<br/>够<br/>积<br/>极<br/>性<br/>不<br/>高<br/>执<br/>行<br/>力<br/>不<br/>强</td>
+    <td valign="top">在<br/>重<br/>大<br/>任<br/>务<br/>中<br/>退<br/>缩<br/>不<br/>前<br/>推<br/>诿<br/>塞<br/>责<br/>不<br/>敢<br/>担<br/>当</td>
+    <td valign="top">工<br/>作<br/>浮<br/>躁<br/>搞<br/>形<br/>式<br/>主<br/>义</td>
+    <td valign="top">作<br/>风<br/>不<br/>实<br/>弄<br/>虚<br/>作<br/>假</td>
+    <td valign="top">以<br/>权<br/>谋<br/>私<br/>吃<br/>拿<br/>卡<br/>要</td>
+    <td valign="top">推<br/>卸<br/>赡<br/>养<br/>抚<br/>养<br/>义<br/>务</td>
+    <td valign="top">家<br/>庭<br/>不<br/>和<br/>谐<br/>生<br/>活<br/>作<br/>风<br/>有<br/>问<br/>题</td>
+  </tr>
+</table>
+</div>
+<div class="t_table">
+
+</div>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curender.mapper.NoticeMapper">
+	<resultMap id="noticeMap" type="Notice">
+		<id property="noticeId" column="notice_id" />
+		<result property="adminId" column="admin_id" />
+		<result property="content" column="content" />
+		<result property="createTime" column="create_time" />
+		<result property="beginTime" column="begin_time" />
+		<result property="endTime" column="end_time" />
+		<result property="grade" column="grade" />
+		<result property="status" column="status" />
+		<result property="type" column="type" />
+		<result property="createrId" column="admin_id" />
+		<result property="updateName" column="username" />	
+		<result property="updateTime" column="update_time" />	
+		<result property="msgId" column="msg_id" />	
+		<result property="noticeUrl" column="notice_url" />
+	</resultMap>
+	
+	<!-- 创建消息 -->
+	<insert id="createNotice" statementType="PREPARED" parameterType="Notice">
+		insert into notice(admin_id,content,begin_time,end_time,grade,status,type,sort,updateid,update_time,msg_id,notice_url)values(#{adminId},#{content},#{beginTime},#{endTime},#{grade},#{status},#{type},#{sort},#{update},#{updateTime},#{msgId},#{noticeUrl})
+	</insert>
+	<!-- 查询公告 -->
+	<select id="selectNotice" statementType="PREPARED" resultMap="noticeMap" parameterType="Map">
+	    select n.notice_id, n.content, date_format(n.create_time, '%Y-%m-%d %T' ) create_time, 
+	    date_format(n.begin_time, '%Y-%m-%d' ) begin_time, date_format(n.end_time, '%Y-%m-%d') end_time, 
+	    n.grade, n.status, n.type, n.sort,n.update_time,n.msg_id,n.notice_url,a.admin_id, a.username 
+	    from notice n,admin a where 1=1 
+	    <if test="status==2">
+	        and n.begin_time <![CDATA[<=]]> date(now()) and n.end_time >= date(now())
+	    </if>
+	    <if test="status==3">
+	        and n.end_time <![CDATA[<]]> date(now())
+	    </if>
+	    <if test="beginTime!=null and beginTime!=''">
+	        and n.create_time >= #{beginTime}
+	    </if>
+	    <if test="endTime!=null and endTime!=''">
+	        and n.create_time <![CDATA[<=]]> #{endTime}
+	    </if>
+	    and n.updateid=a.admin_id order by n.notice_id desc limit #{from}, #{to};
+	</select>
+	<!-- 查询数量 -->
+	<select id="selectNoticeCount" statementType="PREPARED" resultType="int" parameterType="Map">
+	    select count(*) from notice n,admin a where 1=1
+	    <if test="status==2">
+	        and n.begin_time <![CDATA[<=]]> date(now()) and n.end_time >= date(now())
+	    </if>
+	    <if test="status==3">
+	        and n.end_time <![CDATA[<]]> date(now())
+	    </if>
+	    <if test="beginTime!=null and beginTime!=''">
+	        and n.create_time >= #{beginTime}
+	    </if>
+	    <if test="endTime!=null and endTime!=''">
+	        and n.create_time <![CDATA[<=]]> #{endTime}
+	    </if>
+	    and n.admin_id=a.admin_id order by n.notice_id desc;
+	</select>
+	<!-- 根据Id查询公告 -->
+	<select id="selectNoticeById" statementType="PREPARED" resultMap="noticeMap" parameterType="long">
+	    select * from notice n,admin a where n.notice_id = #{noticeId} and n.admin_id=a.admin_id
+	</select>
+	<!-- 更新公告 -->
+	<update id="updateNotice" statementType="PREPARED"  parameterType="Notice">
+	    update notice set updateid=#{update},content=#{content},begin_time=#{beginTime},end_time=#{endTime},sort=#{sort},update_time=#{updateTime},status=#{status},notice_url=#{noticeUrl},type=#{type} where notice_id=#{noticeId}
+	</update>
+	<!-- 查询发布中的公告 -->
+	<select id="selectReleaseNotice" statementType="PREPARED" resultMap="noticeMap" parameterType="Map">
+	    select * from notice where #{nowTime} > begin_time and end_time > #{nowTime} order by notice_id
+	</select>
+</mapper>

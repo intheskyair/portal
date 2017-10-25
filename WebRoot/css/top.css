@@ -1,0 +1,75 @@
+body {
+	FONT-SIZE: 9pt; MARGIN:0px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #808080; COLOR: #000; SCROLLBAR-3DLIGHT-COLOR:#BDC6E7; SCROLLBAR-ARROW-COLOR: #3D6895; SCROLLBAR-TRACK-COLOR: #fff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; TEXT-DECORATION: none;
+background-color:#E0E0E0;
+}
+
+td,th,input{
+	font-family:"宋体", "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 16px;
+	
+}
+input{
+height:19px;
+}
+img{
+border:0px;
+vertical-align: middle;}
+
+a:hover{
+}
+a:link,a:visited,a{
+color:#000;
+text-decoration: none;
+cursor: hand;
+}
+hr{
+height:1px;
+}
+.blue{
+color:blue;
+}
+.bold{
+font-weight:bold;}
+.solid{
+border:1px solid #ccc;}
+fieldset{
+margin-bottom:5px;
+padding:5px 10px;
+/*border:1px solid inactiveborder;*/
+}
+
+legend{
+}
+
+fieldset img{
+margin-right:4px;
+}
+.none{border:0px;}
+.readonlyinput{border-bottom:1px solid #ccc;border-left:0px solid #7F9DB9;border-top:0px solid #7F9DB9;border-right:0px solid #7F9DB9;background-color:#fff;}
+input{background-color:expression((this.readOnly && this.readOnly==true)?"#ECE9D8":"")}
+.ime{ime-mode:disabled;}
+
+/**日期控件**/
+.DatePicker{
+background: url(images/Icon_DatePicker.gif) no-repeat right;
+cursor:hand;}
+
+.SelectItem{
+background: url(images/searchitem.gif) no-repeat right;
+cursor:hand;}
+
+.uploadpic{
+background: url(images/Icon_pic.gif) no-repeat right;
+cursor:hand;}
+
+/**顶部设置开始**/
+
+#top a,#top a:visited {
+	color: #C96D00;
+}
+
+.toplefttitle{font-size:24px; color:#03f;font-weight:bold;height:38px;margin-top:7px;}
+
+.toprightuser{text-align:right; height:63px; background:url(images/topbj_new.jpg) repeat-x; line-height:25px;color: rgb(1, 124, 141);}
+.roll{ font-size:18px; color:##003399; font-weight:bold;}
+/**顶部设置结束**/ /**主页面背景设置开始**/

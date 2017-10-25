@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+#editor_id{width:100%;height:100%}
+.firstTr{height:80px}
+#phone_message_id{width:800px;height:18px;}
+.in_put{height:25px;width:500px;}
+.submit{margin:50px 0 50px 400px;width:80px;height:35px}
+.addPerson{display:inline-block;margin-left:5px;padding-left:15px;width:11px;height:25px;background:url(../images/plus1.gif) left no-repeat;}
+#radio,#radio1{float:left;margin:6px 5px 0 10px}
+#addBox{width:100%;border-collapse:collapse;}
+#addBox tr{border-bottom:1px solid #eee}
+#addBox th{background:#eee}
+#addBox td{height:35px}
+.whichChecked{margin-left:50px}
+.btBox{width:200px;margin:0 auto;padding-top:30px}
+.bt{width:80px;height:30px;}
+.a{font-size:12px;color: red;margin-left: 5px}
+
+
+.state1
+ {  
+ color:#aaa;  
+ }  		
+.state2
+{  
+ color:#000;  
+}  		
+.state3
+{  
+color:red;  
+}  
+.state4
+{  
+ color:green;  
+}
+
+
+

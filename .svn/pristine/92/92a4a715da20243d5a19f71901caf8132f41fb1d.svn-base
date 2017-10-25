@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<process displayName="请假流程" instanceUrl="/flow!all.action" name="leaveJJTest">
+<task assignee="apply.operator" autoExecute="Y" displayName="请假测试" form="/leave!apply.action" layout="165,160,-1,-1" name="apply" performType="ANY" taskType="Major">
+<transition g="" name="transition2" offset="0,0" to="approveDept"/>
+</task>
+<task assignee="approveDept.operator" autoExecute="Y" displayName="部门经理审批" form="/flow!appoval.action" layout="305,156,-1,-1" name="approveDept" performType="ANY" taskType="Major">
+<transition g="" name="transition3" offset="0,0" to="approveBoss"/>
+</task>
+<start displayName="start1" layout="68,157,-1,-1" name="start1">
+<transition g="" name="transition1" offset="0,0" to="apply"/>
+</start>
+<task assignee="approveBoss.operator" autoExecute="Y" displayName="总经理审批" form="/flow!appoval.action" layout="460,157,-1,-1" name="approveBoss" performType="ANY" taskType="Major">
+<transition g="" name="transition4" offset="0,0" to="end1"/>
+</task>
+<end displayName="end1" layout="598,157,-1,-1" name="end1"/>
+</process>

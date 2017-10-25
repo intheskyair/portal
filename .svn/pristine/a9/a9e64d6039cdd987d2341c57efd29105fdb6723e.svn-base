@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curender.mapper.UserInfoMapper">
+	<resultMap id="UserInfoMap" type="UserInfo">
+		<id property="userInfoId" column="user_info_id" />
+		<result property="userId" column="user_id" />
+		<result property="realName" column="real_name" />
+		<result property="gender" column="gender"/>
+		<result property="profession" column="profession" />
+		<result property="qq" column="qq" />
+		<result property="province" column="province" />
+		<result property="city" column="city" />
+		<result property="address" column="address" />	
+	</resultMap>
+	<!-- 创建用户个人信息 -->
+	<insert id="createUserInfo" statementType="PREPARED" parameterType="UserInfo">
+		insert into user_info(user_id,real_name,gender,profession,qq,province,city,address)
+		values(#{userId},#{realName},#{gender},#{profession},#{qq},#{province},#{city},#{address})
+	</insert>
+	<!-- 更新用户个人信息 -->
+	<update id="updateUserInfo" statementType="PREPARED" parameterType="UserInfo">
+		update user_info set user_id=#{userId},real_name=#{realName},gender=#{gender},profession=#{profession},qq=#{qq},province=#{province},city=#{city},address=#{address} where user_info_id=#{userInfoId}
+	</update>
+	<!-- 根据用户ID查询用户个人信息 -->
+	<select id="selectUserInfoByUserId" statementType="PREPARED" resultMap="UserInfoMap" parameterType="long">
+		select * from user_info where user_id=#{userId}
+	</select>
+	<!-- 根据用户ID删除用户个人信息 -->
+	<delete id="deleteUserInfoByUserId" statementType="PREPARED"  parameterType="long">
+		delete table user_info where user_id=#{userId}
+	</delete>
+</mapper>

@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="../css/compart/common.css" />
+<div style="overflow: hidden;">
+	<p class="btt">常州市水利局下属单位民主测评表</p>
+		<table class="table02" cellpadding="0" cellspacing="0">
+			 <tr class="blue_y">
+			    <td rowspan="2">单位<br/>名称</td>
+			    <td rowspan="2">评价<br/>等次</td>
+			    <td colspan="4">履行职责情况</td>
+			    <td colspan="4">内部建设情况</td>
+			    <td rowspan="2">总体<br/>评价</td>
+			 </tr>
+			 <tr class="title_t blue_y">
+			    <td>目标<br/>任务</td>
+			    <td>依法<br/>行政</td>
+			    <td>创新<br/>创优</td>
+			    <td>服务<br/>职能</td>
+			    <td>精神<br/>面貌</td>
+			    <td>工作<br/>作风</td>
+			    <td>团结<br/>协作</td>
+			    <td>廉洁<br/>自律</td>
+			  </tr>
+  	</table>
+</div>

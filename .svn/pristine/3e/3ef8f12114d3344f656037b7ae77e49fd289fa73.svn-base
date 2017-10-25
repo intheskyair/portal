@@ -1,0 +1,162 @@
+table{ 
+	width:100%; 
+	text-align:center; 
+	margin: auto;
+}
+li{list-style-type:none;}
+.lieb li{list-style-type:none; text-align: left;}
+.table_09 td{height:30px;line-height:30px;}
+.table-c table{border-right:1px solid #F00;border-bottom:1px solid #F00}
+.table-c table td{border-left:1px solid #F00;border-top:1px solid #F00}
+.table01{ 
+	width:750px;
+	height:120px;
+	background-color:#fff; 
+	border-top:1px solid #222 ; 
+	border-right:1px solid #222; 
+	margin: 0 auto;
+    overflow: hidden; 
+}
+.table01 td{
+	border-bottom:1px solid #222 ;
+	border-left:1px solid #222;  
+	color:#666 ; 
+	vertical-align: middle; 
+	color:#000; 
+	font-size:16px; 
+	font-weight:bold
+}
+.table_h td{height: 30px;
+    line-height: 30px;}
+.t_table {
+	overflow-y: scroll;
+	margin-bottom:5px;
+}
+.t_table_y {
+	overflow-y: scroll;
+}
+.title_div {margin-right: 17px;}    
+.name_td{
+	width:100px;
+}
+.blue{background:#d3e7fb}
+.title_d td {width:55px;background:#d3e7fb}
+.blue_y td{background:#d3e7fb}
+.big_td1{width:100px;}
+.big_td8{
+	width:85px;
+	height: 40px;
+}
+.big_td3{
+	width:560px;
+	height: 40px;
+}
+.title_d td {
+    width: 55px;
+}
+.eval_td{
+	width: 85px;
+	height: 40px;
+}
+.eval_tr{
+	width: 43px;
+	height: 39px;
+}
+.eval_td_type1{
+	width: 220px;
+	height: 40px;
+}
+.last_td{
+	width:80px;
+}
+.kd{width:65px}
+.last_td_type1{
+	width: 129px;
+}
+.mzbg4_w1{
+	width: 10%;
+}
+.mzbg4_w2{
+	width: 20%;
+}
+span{ 
+	font-weight:bold
+}
+.btt{ 
+	font-size:24px; 
+	font-weight:bold;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.srk{ 
+	width:90%;
+	border:none; 
+	height:90%; 
+	text-align:center; 
+	font-size:16px
+}
+.title_fiex{
+	position: fixed;
+	top:0px;
+	box-shadow:0 0 5px #888;
+	background-color: #fff;
+	left: 0px;
+	right:0px;
+	/* margin-left:auto;
+	margin-right: auto; */
+}
+ .ie{   
+       _position: absolute;  
+       _clear: both;   
+       _top:expression(eval(document.compatMode &&   
+               document.compatMode=='CSS1Compat') ?   
+               documentElement.scrollTop   
+               +(documentElement.clientHeight-this.clientHeight) - 1   
+               : document.body.scrollTop   
+               +(document.body.clientHeight-this.clientHeight) - 1); 
+}
+.selectBtn{
+	color: white;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	borde-radius:8px;
+	background-color: #31b0d5;
+	width: 80px;
+	line-height: 1.5;
+	padding: 5px 10px;
+	outline: none;
+	cursor: pointer;
+	float: left;
+}
+.btn_div{
+	position:fixed;
+	top:300px;
+	right:150px;
+	overflow: hidden;
+}
+@media screen and (max-width:769px){
+	.btn_div{
+		top:0px;
+		right:50px;
+	}
+}
+@media screen and (max-width:1199px){
+	.btn_div{
+		top:0px;
+		right:60px;
+	}
+}
+@media screen and (min-width:1200px){
+	.btn_div{
+		right:10px;
+		width: 200px;
+	}
+}
+@media screen and (min-width:1500px){
+	.btn_div{
+		right:20px;
+		 width: 300px;
+	}
+select {
+	width: 51px;
+}

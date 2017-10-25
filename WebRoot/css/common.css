@@ -1,0 +1,152 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+textarea{
+	margin: 0;
+	padding: 0;
+}
+input{
+	border: none;
+}
+
+.sl-content{
+	color:crimson;
+    /*width: 1000px;*/
+	padding-top:0px;
+}
+.sl-content h1{font-size: 36px;line-height: 36px;}
+.sl-title{
+	margin: 0 auto;
+	text-align: center;
+	
+}
+.sl-div-table{
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.sl-table{
+	/*width: 1000px;*/
+	
+}
+.sl-table td{text-align: left;}
+.sl-table span{text-align: left;}
+.sl-textarea{
+	width: 998px;
+	resize: none;
+}
+.sl-table-border-top{
+	border-top:solid 2px #DC143C;;
+}
+.sl-table-border-botm{
+	/*border-bottom: solid 2px #DC143C;*/
+}
+.sl-table-td-left{
+	border-left: solid 1px #DC143C;
+}
+.sl-table-td-right{
+	border-right:solid 1px #DC143C;
+}
+.sl-table-td-botm{
+	border-bottom: solid 1px #DC143C;
+}
+.sl-width-one{
+	width: 25%;
+}
+.sl-width-two{
+	width: 32.5%;
+}
+.sl-width-three{
+	width: 18%;
+}
+.sl-widht-four{
+	width: 40%;
+}
+.sl-width-five{
+	width:50%;
+}
+.sl-width-one-px{
+/* 	width: 80px; */
+}
+.sl-width-two-px{
+	width: 30px;
+}
+.sl-hegiht-one{
+	height: 120px; 
+}
+.sl-hegiht-two{
+	height: 80px;
+}
+.sl-hegiht-two span{
+	text-align: left;
+}
+.sl-hegiht-tree{
+	height: 200px;
+}
+.sl-hegiht-four{
+	height: 60px;
+}
+.sl-height-five{
+	height: 18px;
+}
+.sl-height-six{
+	height: 100px;
+}
+.sl-line-h-one{
+	line-height: 60px;
+}
+.sl-div-title{
+	width: 100%;
+	height:25px;
+	color:red;
+}
+.sl-div-body{
+	width: 100%;
+	height: 78%;
+}
+.sl-div-textarea{
+	/*width: 97%;*/
+    height:90%;
+	border: none;
+	resize: none;
+	overflow: hidden;
+}
+.sl-div-input{
+	width: 97%;
+	height: 92%;
+	border: none;
+	resize: none;
+	text-align: center;
+}
+.sl-div-file-num{
+	width: 40%;
+	border: none;
+	resize: none;
+}
+.float-left{
+	float: left;
+}
+.sub-title{
+	font-size: 22px;
+}
+.mt15{
+	margin-top: 15px;
+}
+.p5{
+	padding: 3px;
+}
+
+
+.selectBtn{
+	color: white;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	borde-radius:8px;
+	background-color: #31b0d5;
+	width:100px;
+	line-height: 1.5;
+	padding: 5px 10px;
+	outline: none;
+	cursor: pointer;
+}

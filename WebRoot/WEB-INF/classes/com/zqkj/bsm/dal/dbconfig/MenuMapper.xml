@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curender.mapper.MenuMapper">
+	<resultMap id="menuMap" type="Menu">
+		<id property="menuId" column="id" />
+		<result property="menuName" column="menuname" />
+		<result property="menuOrder" column="menuseq" />
+		<result property="isLeaf" column="is_leaf" />
+		<result property="upMenuId" column="parentid" />
+		<result property="menuUrl" column="menuurl" />
+		<result property="parentname" column="parentname" />
+		<result property="isIframe" column="isIframe" />
+	</resultMap>
+	<!-- 新建菜单 -->
+	<insert id="createMenu" statementType="PREPARED" parameterType="Menu">
+		insert into sys_menu(menuname,menuseq,is_leaf,parentid,menuurl) values(#{menuName},#{menuOrder},#{isLeaf},#{upMenuId},#{menuUrl})
+	</insert>
+	<update id="updateMenu" statementType="PREPARED" parameterType="Menu">
+		update sys_menu set menuname=#{menuName},is_leaf=#{isLeaf},parentid=#{upMenuId},menuurl=#{menuUrl} where id=#{menuId}
+	</update>
+	<!-- 根据id查询 -->
+	<select id="readMenuById" statementType="PREPARED" resultMap="menuMap" parameterType="long">
+		select * from sys_menu where id=#{menuId}
+	</select>
+	<!-- 读取所有 -->
+	<select id="readMenuAll" statementType="PREPARED" resultMap="menuMap" parameterType="Map">
+		select 
+				a.*,
+				(select b.menuname from sys_menu b where b.id=a.parentid) as parentname 
+		from
+				 sys_menu a
+		where 
+				 1=1
+		<if test="menuName != null and menuName != ''">
+		and 	 a.MENUNAME like CONCAT('%',#{menuName},'%' )
+		</if>
+		order by a.PARENTID
+		limit #{from}, #{to}
+	</select>
+	<!-- 读取所有一级菜单 -->
+	<select id="readOneGradeMenu" statementType="PREPARED" resultMap="menuMap">
+		select * from sys_menu where parentid = 0
+	</select>
+	<!-- 读取所有count-->
+	<select id="getCount" statementType="PREPARED" parameterType="Map" resultType="int">
+		select count(*) from sys_menu
+		where 
+				 1=1
+		<if test="menuName != null and menuName != ''">
+		and 	 MENUNAME like CONCAT('%',#{menuName},'%' )
+		</if>;
+	</select>
+</mapper>

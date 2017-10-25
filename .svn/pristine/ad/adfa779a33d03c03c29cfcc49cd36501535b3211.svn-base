@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curender.mapper.UserMapper">
+	<resultMap id="userMap" type="User">
+		<id property="userId" column="user_id" />
+		<result property="suserId" column="suser_id" />
+		<result property="email" column="email" />	
+		<result property="nickName" column="nick_name" />
+		<result property="regPassword" column="reg_password" />
+		<result property="regPhone" column="reg_phone" />
+		<result property="province" column="province" />
+		<result property="city" column="city" />
+		<result property="payPassword" column="pay_password"/>
+		<result property="payPhone" column="pay_phone" />
+		<result property="lastOperated" column="last_operated" />
+		<result property="sendMailTime" column="send_mail_time" />
+		<result property="grade" column="grade" />		
+		<result property="status" column="status" /><!-- 0未激活，1-正常用户，2-锁定用户 3-已验证用户 4-正常用户 -->
+		<result property="createTime" column="create_time" />
+		<result property="space" column="space" />
+		<result property="balance" column="balance" />
+		<result property="infoFlag" column="info_flag" />
+		<result property="token" column="token" />
+		<result property="regSource" column="reg_source" />
+	</resultMap>
+	<!-- 用户注册 -->
+	<insert id="userCreate" statementType="PREPARED" parameterType="User">
+		insert into user(suser_id,nick_name,reg_password,email,reg_phone,province,city,create_time,status,token,reg_source)
+		values(#{suserId},#{nickName},#{regPassword},#{email},#{regPhone},#{province},#{city},#{createTime},#{status},#{token},#{regSource})
+	</insert>
+	<update id="userUpdate" statementType="PREPARED" parameterType="User">
+		update user set nick_name=#{nickName},reg_password=#{regPassword},email=#{email},province=#{province},city=#{city},reg_phone=#{regPhone},pay_phone=#{payPhone},last_operated=#{lastOperated},status=#{status} where user_id=#{userId}
+	</update>
+	
+	<update id="updateRegPass" statementType="PREPARED" parameterType="User">
+		update user set reg_password=#{regPassword} where user_id=#{userId}
+	</update>
+	<update id="updatePayPass" statementType="PREPARED" parameterType="User">
+		update user set pay_password=#{payPassword} where user_id=#{userId}
+	</update>
+	<update id="updateLastOperated" statementType="PREPARED" parameterType="User">
+		update user set last_operated=#{lastOperated} where user_id=#{userId}
+	</update>
+	<update id="updateGrade" statementType="PREPARED" parameterType="User">
+		update user set grade=#{grade} where user_id=#{userId}
+	</update>
+	<update id="updateUserStatus" statementType="PREPARED" parameterType="User">
+		update user set status=#{status} where user_id=#{userId}
+	</update>
+	<select id="readUserByEmail" statementType="PREPARED" resultMap="userMap" parameterType="String">
+		select * from user where email=#{email}
+	</select>
+	<select id="readByRegPhone" statementType="PREPARED" resultMap="userMap" parameterType="User">
+		select * from user where reg_phone=#{regPhone}
+	</select>
+	<select id="readAllEmail" statementType="PREPARED" resultMap="userMap" parameterType="String">
+		select email from user where status='4'
+	</select>
+	<select id="readAllPhone" statementType="PREPARED" resultMap="userMap" parameterType="String">
+		select reg_phone from user where status='4' and reg_phone is not null and reg_phone !=''
+	</select>
+	<select id="selectUserByID" statementType="PREPARED" resultMap="userMap" parameterType="long">
+		select * from user where user_id=#{userId}
+	</select>  
+	 <!-- Add by huanghaifei  -->
+	<update id="updateSuserIdAndStatus" statementType="PREPARED" parameterType="User">
+		update user set suser_id=#{suserId},status=#{status} where user_id=#{userId}
+	</update>
+	<select id="readRegPhoneByEmail" statementType="PREPARED"  resultType="String" parameterType="String">
+		select reg_phone from user where email=#{email}
+	</select>
+	<select id="readPayPhoneByEmail" statementType="PREPARED"  resultType="String" parameterType="String">
+		select pay_phone from user where email=#{email}
+	</select>
+	<update id="updateRegPhone" statementType="PREPARED" parameterType="User">
+		update user set reg_phone=#{regPhone} where user_id=#{userId}
+	</update>
+    <select id="readByPayPhone" statementType="PREPARED" resultMap="userMap" parameterType="User">
+		select * from user where pay_phone=#{payPhone}
+	</select>
+    <select id="readUserByTime" statementType="PREPARED" resultMap="userMap" parameterType="Map">
+		select * from user where create_time between #{startTime} and #{endTime} order by create_time desc
+	</select>
+    <select id="readUserCountByTime" statementType="PREPARED" resultType="int" parameterType="Map">
+		select count(*) from user where create_time between #{startTime} and #{endTime}
+	</select>
+	<update id="updatePayPhone" statementType="PREPARED" parameterType="User">
+		update user set pay_phone=#{payPhone} where user_id=#{userId}
+	</update>
+	<update id="updateNickName" statementType="PREPARED" parameterType="User">
+		update user set nick_name=#{nickName} where user_id=#{userId}
+	</update>
+	<update id="updateCity" statementType="PREPARED" parameterType="User">
+		update user set province=#{province},city=#{city} where user_id=#{userId}
+	</update>
+	<update id="updateSendMailTime" statementType="PREPARED" parameterType="User">
+		update user set send_mail_time=#{sendMailTime} where email=#{email}
+	</update>
+	<select id="selectSendMailTime" statementType="PREPARED" resultType="long" parameterType="long">
+		select send_mail_time from user where user_id=#{userId}
+	</select>
+	<update id="updateBalance" statementType="PREPARED" parameterType="User">
+		update user set balance=#{balance} where user_id=#{userId}
+	</update>
+	<update id="updateInfoFlag" statementType="PREPARED" parameterType="User">
+		update user set info_flag=#{infoFlag} where user_id=#{userId}
+	</update>
+	<select id="selectSpace" statementType="PREPARED" resultType="long" parameterType="User">
+		select space from user  where suser_id=#{suserId}
+	</select>
+	<update id="updateSpace" statementType="PREPARED" parameterType="User">
+		update user set space=#{space} where suser_id=#{suserId}
+	</update>
+	<select id="selectGrade" statementType="PREPARED" resultType="String" parameterType="long">
+		select grade from user  where suser_id=#{suserId}
+	</select>
+	<update id="updateToken" statementType="PREPARED" parameterType="User">
+		update user set token=#{token} where user_id=#{userId}
+	</update>
+	<select id="selectToken" statementType="PREPARED" parameterType="User" resultType="String">
+		select token from user where email=#{email} and reg_password=#{regPassword}
+	</select>
+	<!-- 查询某个email的注册个数 -->
+	<select id="readEmailCount" statementType="PREPARED" parameterType="String" resultType="int">
+		select count(*) from user where email=#{email}
+	</select>
+</mapper>

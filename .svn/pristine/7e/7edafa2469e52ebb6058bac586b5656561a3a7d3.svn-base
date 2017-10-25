@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="../css/compart/common.css" />
+<div style="overflow: hidden;">
+	<p class="btt">副职领导干部民主测评表</p>
+	<table class="table02" cellpadding="0" cellspacing="0">
+  <tr class="blue_y">
+    <td rowspan="3" class="big_td1" >姓名</td>
+    <td rowspan="3" class="big_td8">二级指标</td>
+    <td colspan="10" class="big_td3">评价意见</td>
+  </tr>
+  <tr class="blue_y">
+    <td colspan="2" style="width:109px;">A</td>
+    <td colspan="2" style="width:112px;">B</td>
+    <td colspan="3" style="width:168px;">C</td>
+    <td colspan="3" style="width:170px;">D</td>
+  </tr>
+  <tr  class="title_t title_d">
+    <td>10分</td>
+    <td>9分</td>
+    <td>8分</td>
+    <td>7分</td>
+    <td>6分</td>
+    <td>5分</td>
+    <td>4分</td>
+    <td>3分</td>
+    <td>2分</td>
+    <td>1分</td>
+  </tr>
+</table>
+</div>
+<div class="t_table">
+
+</div>

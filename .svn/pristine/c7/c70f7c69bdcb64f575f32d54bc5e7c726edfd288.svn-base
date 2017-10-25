@@ -1,0 +1,99 @@
+<link rel="stylesheet" type="text/css" href="../css/compart/common.css" />
+<div class="title_div ">
+	<p class="btt">选人用人工作民主评议表</p>
+	<table class="table02 blue_y" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td colspan="8" style="text-align: left;">1、对本地区（本单位）选人用人工作的总体评价</td>
+  </tr>
+  <tr>
+    <td>满 意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>基本满意</td>
+    <td><input type="checkbox"  disabled="disabled" class="td_num_0 "></td>
+    <td>不满意</td>
+    <td><input type="checkbox"  disabled="disabled" class="td_num_0 "></td>
+    <td>不了解</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+  </tr>
+  <tr>
+    <td colspan="8" style="text-align: left;">2、对本地区（本单位）执行选人用人工作政策法规情况的看法</td>
+  </tr>
+  <tr>
+    <td>满 意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>基本满意</td>
+    <td><input type="checkbox"  disabled="disabled" class="td_num_0 "></td>
+    <td>不满意</td>
+    <td><input type="checkbox"  disabled="disabled" class="td_num_0 "></td>
+    <td>不了解</td>
+    <td><input type="checkbox"  disabled="disabled" class="td_num_0 "></td>
+  </tr>
+  <tr>
+    <td colspan="8" style="text-align: left;">3、对本地区（本单位）整治用人上不正之风工作的看法</td>
+  </tr>
+  <tr>
+    <td>满 意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>基本满意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>不满意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>不了解</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+  </tr>
+  <tr>
+    <td colspan="8" style="text-align: left;">4、对本地区（本单位）深化干部人事制度改革的看法</td>
+  </tr>
+  <tr>
+    <td>满 意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>基本满意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>不满意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>不了解</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+  </tr>
+  <tr>
+    <td colspan="8" style="text-align: left;">5、对本地区（本单位）推动干部担当作为、防治为官不为的看法</td>
+  </tr>
+  <tr>
+    <td>满 意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>基本满意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>不满意</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+    <td>不了解</td>
+    <td><input type="checkbox" disabled="disabled" class="td_num_0 "></td>
+  </tr>
+<!--   <tr>
+     <td colspan="8">
+    <div><p>6、你认为本地区（本单位）选人用人工作存在的突出问题是什么（可多选）</p>
+    <ul>
+<li><input type="checkbox" class="td_num_0 ">（1）执行《干部任用条例》规定的资格、条件和程序不严格</li>
+<li><input type="checkbox" class="td_num_0 ">（2）任人唯亲</li> 
+<li><input type="checkbox" class="td_num_0 ">（3）领导干部用人上个人说了算  </li> 
+<li><input type="checkbox" class="td_num_0 ">（4）跑官要官、说情打招呼 </li> 
+<li><input type="checkbox" class="td_num_0 ">（5）买官卖官 </li> 
+<li><input type="checkbox" class="td_num_0 ">（6）拉票</li> 
+<li><input type="checkbox" class="td_num_0 ">（7）其他<input type="text" style="border:none;border-bottom:#000 1px solid" />（如选此项，请填写具体内容）</li>
+<li><input type="checkbox" class="td_num_0 ">（8）不存在突出问题</li>
+</ul>   
+    </div>
+    
+    
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="8"><p>你对本地区（本单位）选人用人工作有何意见和建议？</p>
+    <textarea  readonly="readonly" id="bz" name="bz"></textarea>
+    </td>
+  </tr> -->
+</table>
+	
+	
+	
+	
+
+</div>

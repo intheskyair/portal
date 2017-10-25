@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<!-- 指定被struts2处理的请求后缀类型。多个用逗号隔开 -->   
+<constant name="struts.action.extension" value="action" />
+<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+<constant name="struts.multipart.saveDir" value="/tmp"/>
+<constant name="struts.multipart.maxSize" value="102400000" />
+ <!-- 请求参数的编码方式 -->  
+<constant name="struts.i18n.encoding" value="UTF-8" /> 
+<!-- 当struts.xml改动后，是否重新加载。默认值为false(生产环境下使用),开发阶段最好打开 -->  
+<constant name="struts.configuration.xml.reload" value="false" />
+<!-- 是否使用struts的开发模式。开发模式会有更多的调试信息。默认值为false(生产环境下使用),开发阶段最好打开 -->  
+<constant name="struts.devMode" value="false" />  
+<!-- 设置浏览器是否缓存静态内容。默认值为true(生产环境下使用),开发阶段最好关闭 -->  
+<constant name="struts.serve.static.browserCache" value="true" />  
+<!-- 开发模式 -->
+<package name="struts2" namespace="" extends="struts-default">
+	<result-types>
+    	<result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+    </result-types>
+   <!-- 拦截未登陆的请求 -->
+	<interceptors>
+		<interceptor name="authenticationInterceptor" class="com.zqkj.bsm.security.AuthenticationInterceptor" />
+		<interceptor-stack name="secureStack">
+			<interceptor-ref name="authenticationInterceptor" />
+			<interceptor-ref name="fileUpload" />
+			<interceptor-ref name="defaultStack" />
+		</interceptor-stack>
+        <interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+    </interceptors>
+	<default-interceptor-ref name="secureStack" />
+	<global-results>
+		<result name="logout">/index.jsp</result><!-- 管理员登录页面 -->
+		<result name="logout2" type="redirect">admin!logout.action</result>
+		<result name="logout_lost">/result_lost.jsp</result>
+		<result name="success">/success.jsp</result>
+		<result name="failure">/failure.jsp</result>
+		<result name="result">/WEB-INF/jsp/result.jsp</result>	
+	</global-results>					
+</package>
+</struts>

@@ -1,0 +1,62 @@
+/**登录界面样式**/
+/* body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px; 
+    border: 0px;
+    font-size:12px;
+    line-height:150%;
+    text-align:center;
+    margin-left:auto;margin-right:auto;
+    font-family:'Lucida Grande','Lucida Sans Unicode','微软雅黑','新宋体',arial,verdana,sans-serif;
+    width:100%;
+    background-color:#ffb51e;
+}
+
+img{
+	border:0px;
+}
+#login{
+	width:1024px;height:600px; margin:0 auto;
+	background: url(../images/login_bg.jpg) no-repeat;
+}
+.yhm{
+	padding-left:370px;
+	padding-top:288px;
+	font-size:24px;color:#006876;letter-spacing:3px;
+}
+
+.dlbuttom{
+	padding-top:0px;padding-left:260px;cursor:pointer;
+}
+.text_bg{ width:416px; padding-left:2px; height:36px; border:none;font-size:18px; line-height:36px; background:url(../images/text_bg.jpg) no-repeat;} */
+body.wi-body-login{ background:#eeeeee;}
+
+.wi-wrap-login{ position:absolute; left:50%; margin:7% 0 0 -292px; width:586px; height:456px;}
+	.wi-wrap-login-main{ margin:104px auto 71px; width:458px; background:url(../images/bg_login_cnter.png) repeat-x }
+		.wi-bg-login-left{}
+		.wi-bg-login-right{ }
+	.wi-logo-login{ clear:both; padding-top:37px; width:330px; }
+		.wi-logo-login .logo{ float:left;}
+		.wi-logo-login h1{ float:left; color:#3f76a5; font-size:150%; font-weight:bold; line-height:50px; text-indent:10px; letter-spacing:2px;}
+	.wi-login-main{ height:124px;}
+		.wi-li-login{ padding:0px 0 0 110px;}
+			.wi-li-login-item{ clear:both; margin:4px 0; list-style-type:none;height:30px;line-height:30px}
+				.wi-li-login-item label{ height:30px;line-height:30px;display: inline-block width:80px; color:#666;font-family:微软雅黑; word-spacing:8px; list-style-type:none;  font-size:14px}
+				.wi-li-login-item .wi-ipt-1{width:170px; border:1px solid #ccc;height:30px;line-height:30px;background-color:rgba(255,255,255,0.6);padding:0px; margin:0px; padding-left:10px}
+				.wi-img-code{ width:64px; height:22px; border:1px solid #ccc; cursor:pointer; vertical-align:middle;}
+.wi-login-bottom{ height:42px; }
+	.wi-login-bottom-txt{  float:left; padding-left:10px; padding-top:10px; color:#b0b0b0;}
+		.wi-login-bottom-txt .warn{ color:#fb0; display:none; margin-top:2px;}
+			.wi-login-bottom-txt .warn span{ float:left; line-height:16px;}
+			.wi-login-bottom-txt .warn .ui-icon{ margin-right:4px;}
+	.wi-login-bottom-btn{margin-left:130px; margin-top:4px;float:left; text-align: center}
+		.wi-li-login-btn{ margin-top:55px; width:100px;}
+			.wi-li-login-btn li{ float:left;}
+			 .wi-li-login-btn .ui-button{ padding:10px 0;}
+.wi-login-shadow{ background:url(../images/shadow_login_center.png) repeat-x;}
+	.wi-login-shadow-left{ background:url(../images/shadow_login_left.png) no-repeat;}
+	.wi-login-shadow-right{ }
+/* 清理浮动 */
+.fn-clear:after { visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0; }
+.fn-clear { zoom:1; /* for IE6 IE7 */ }
+.fn-left { float:left; }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curender.mapper.ConsumeMapper">
+	<resultMap id="consumeMap" type="Consume">
+		<id property="consumeId" column="consume_id" />
+		<result property="userId" column="user_id" />
+		<result property="suserId" column="suser_id" />
+		<result property="taskId" column="task_id" />
+		<result property="taskName" column="task_name" />
+		<result property="consumeTime" column="consume_time" />
+		<result property="submitTime" column="submit_time" />
+		<result property="finishTime" column="finish_time" />
+		<result property="amount" column="amount" />
+		<result property="price" column="price" />
+		<result property="paidSec" column="paid_sec" />
+		<result property="frameSec" column="frame_sec" />
+		<result property="type" column="type" />
+	</resultMap>
+	<insert id="createConsume" statementType="PREPARED" parameterType="Consume" useGeneratedKeys="true" keyProperty="consumeId">
+		insert into consume(user_id,suser_id,task_id,task_name,consume_time,submit_time,finish_time,amount,price,paid_sec,frame_sec,type)
+		values(#{userId},#{suserId},#{taskId},#{taskName},#{consumeTime},#{submitTime},#{finishTime},#{amount},#{price},#{paidSec},#{frameSec},#{type})
+	</insert>
+	<select id="readConsumeById" statementType="PREPARED" parameterType="long" resultMap="consumeMap">
+		select * from consume where consume_id=#{consumeId}
+	</select>
+	<select id="readConsumeByUserId" statementType="PREPARED" parameterType="long" resultMap="consumeMap">
+		select * from consume where user_id=#{userId} and consume_time != 0  order by consume_time DESC
+	</select>
+	<select id="readConsumeCountByUser" statementType="PREPARED" parameterType="long" resultType="int">
+		select count(*) from consume where user_id=#{userId} and consume_time != 0
+	</select>
+	<select id="getTotalConsumeAmount" statementType="PREPARED" parameterType="long" resultType="java.math.BigDecimal">
+		select sum(amount) from consume where user_id=#{userId} and consume_time != 0
+	</select>
+	<select id="readConsumeByTaskId" statementType="PREPARED" parameterType="long" resultMap="consumeMap">
+		select * from consume where task_id=#{taskId}
+	</select>
+	<update id="updateConsumeType" statementType="PREPARED" parameterType="Consume">
+		update consume set type=#{type} where consume_id=#{consumeId}
+	</update>
+	<update id="finishConsume" statementType="PREPARED" parameterType="Consume">
+		update consume set consume_time=#{consumeTime},type=#{type} where consume_id=#{consumeId}
+	</update>
+</mapper>

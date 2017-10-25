@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curender.mapper.EmailSendMxMapper">
+	<resultMap id="emailsendmxMap" type="EmailSendMx">
+		<id property="id" column="id" />
+		<result property="emailAddress" column="email_address" />
+		<result property="status" column="status" />	
+		<result property="mainId" column="main_id" />	
+	</resultMap>
+	<!-- 根据Id查询信息 -->
+	<select id="readEmailById" statementType="PREPARED" resultMap="emailsendmxMap" parameterType="EmailSendMx">
+		select * from email_send_mx where main_id=#{mainId} order by id desc
+	</select>
+	<select id="selectEmailSendMxCount" statementType="PREPARED" resultType="int" parameterType="EmailSendMx">
+	    select count(*) from email_send_mx where main_id=#{mainId}
+	 </select>
+</mapper>

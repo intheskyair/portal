@@ -1,0 +1,256 @@
+/**重新写框架右边样式**/
+body {
+	overflow:auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 0px; overflow:auto;
+    font-size:14px;
+    line-height:150%;
+    text-align:center;
+    margin-left:auto;margin-right:auto;
+    font-family:'微软雅黑','Lucida Grande','Lucida Sans Unicode','宋体',arial,verdana,sans-serif;
+}
+
+img{border:0px;}
+form{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+select{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+input{
+	padding:0 0 0 0;
+	margin:0 0 0 0;	
+}
+a{
+	color:blue;
+	text-decoration:none; 
+}
+a:hover{
+    color:#D28000;
+    text-decoration:underline; 
+}
+textarea{width:100%;}
+select{width:180px;}
+/* input{width:180px;} */
+.inputstyle{width:50px;}
+.mainpic{margin-top:50px;}
+.tabtitlestyle{text-align:left;font-weight:bold;color:#D28000;padding:4px 0px 4px 19px;}
+/**右边关闭栏背景样式**/
+.notes {
+	width:100%;
+	padding: 6px 0px 4px 15px;
+	margin-top:0px;
+	text-align:left;
+	font-weight:bold;
+	margin-left:auto;margin-right:auto;
+	border-bottom:1px solid #76c8fc;
+	background-color: #c1e5fb;
+}
+.notes img{margin-bottom: 8px;}
+
+/**右边关闭栏背景样式结束**/
+
+/**通用按钮样式**/
+.but{
+	text-align:right;
+	margin:4px 21px 5px 0px;
+}
+.but2{
+	text-align:center;
+	margin:4px 21px 5px 0px;
+}
+.buttonb2{
+	text-align:center;
+	cursor: pointer;
+	width:80px;height:50px;
+	font-size:22px;
+}
+
+.buttonb{
+	cursor: pointer;
+	text-align: center;
+	padding:2px 0px 0px 0px;
+	width:90px;height:21px;
+	font-size:12px; color:#1b6db4;
+}
+.button {
+	padding: 1px 2px;
+	cursor: pointer;
+	text-align: center;
+	color: #033;
+	background-color: #ccc;
+	background: url(../Images/stylebutton.png) repeat-x 0 0;
+	border: 1px solid #2263a5;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 4px;
+}
+/**通用按钮样式结束**/
+
+/**表格样式一 （列表样式）**/
+.tablestyle{
+	width:100%;
+    line-height:25px;
+    font-family:微软雅黑,Arial, Helvetica, sans-serif 宋体;
+    font-size:12px; 
+    border-right:1px solid #97ccfd;
+    border-bottom:1px solid #97ccfd;
+    word-break:break-all;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    margin-top:5px;
+    overflow-x:auto;
+}
+.tablestyle th{
+	width:10%;
+	background:#d0e9fe;
+    font-size:14px; 
+    font-weight:bold;
+    padding:0px 5px 0px 5px;
+    height:32px;
+    text-align:center;
+    border-left:1px solid #97ccfd;
+    border-top:1px solid #97ccfd;
+
+    word-break:break-all;
+    letter-spacing:1px;
+}
+.tablestyle td{
+    border-left:1px solid #97ccfd;
+    border-top:1px solid #97ccfd;
+    font-size:14px; 
+    color:#000;
+    padding:0px 5px 0px 5px;
+    text-align:center;
+    height:25px;
+    word-break:break-all;
+}
+.tablestyle tr{
+    font-size:14px; 
+    color:#000;
+    text-align:center;
+    height:25px;
+    word-break:break-all;
+    background:#fff;
+}
+
+.pageshow{
+	float:left;width:70%;text-align:left;
+	margin:0px 0px 0px 8px;
+	color:blue;
+}
+.page{
+	float:right;width:50%;height:20px;text-align:right;
+	margin:0px 8px 0px 0px;text-decoration:none;
+}
+.pageshow a{
+    color:blue;
+    text-decoration:none;
+}
+.pageshow a:visited{
+    color:blue;
+    text-decoration:none;
+}
+.pageshow a:hover{
+    color:#D28000;
+    text-decoration:none;
+}
+
+/**表格样式一 （列表样式）结束**/
+
+/**表格样式二 （列表样式）**/
+.tablestyle2{
+	width:98%;
+    line-height:25px;
+    font-family:Arial, Helvetica, sans-serif 宋体;
+    font-size:12px; 
+    border-right:1px solid #BFC0C2;
+    border-bottom:1px solid #BFC0C2;
+    word-break:break-all;white-space: nowrap;
+    margin-left:auto;margin-right:auto;
+    margin-bottom:5px;
+    margin-top:5px;
+    overflow-x:auto;
+}
+.tablestyle2 th{
+	background:#E3E9E9;
+    font-size:22px; font-weight:bold;padding:0px 5px 0px 5px;
+    height:45px;text-align:center;
+    border-left:1px solid #BFC0C2;
+    border-top:1px solid #BFC0C2;
+    boeder-bottom:1px solid #BFC0C2;
+    word-break:break-all;white-space: nowrap;
+    letter-spacing:1px;
+}
+.tablestyle2 td{
+    border-left:1px solid #BFC0C2;
+    border-top:1px solid #BFC0C2;
+    boeder-bottom:1px solid #BFC0C2;
+    font-size:22px; color:#000;padding:0px 5px 0px 5px;
+    text-align:left;height:45px;
+    word-break:break-all;white-space: nowrap;
+}
+.tablestyle2 tr{
+    font-size:22px; color:#000;
+    text-align:left;height:45px;
+    word-break:break-all;white-space: nowrap;
+    background:#F4F8F8;
+}
+.table2input{
+	height:45px;font-size:32px;width:380px;
+}
+.table2yh{
+	color:#FD8300;font-size:14px;margin-top:5px;
+}
+.tb{
+   color:#FD8300;
+}
+.tb2{
+   color:#FD8300;font-size:25px;
+}
+/**表格样式二 （列表样式）结束**/
+
+/**displaytable样式开始**/
+.mobile{
+	height:25px;
+	color:#000;
+	border-collapse: collapse;
+	width:98%;font-size:12px;
+	/* word-break:break-all;white-space: nowrap; */
+	word-break: break-all;
+	word-wrap: break-all;
+	margin:0 auto;
+	/* padding:0 8px 0 8px; */
+}
+.mobile td {
+	valign:middle; border:1px solid #BFC0C2;
+	/* word-break:break-all;white-space: nowrap; */
+	word-break: break-all;
+	word-wrap: break-all;
+	text-align: center;
+}
+.mobile tr {	
+	font-size:12px;
+	background:#F4F8F8;
+	/* word-break:break-all;white-space: nowrap; */
+}
+.mobile th{	
+	border:1px solid #BFC0C2;
+	background-color: #E3E9E9;
+	color:#000;letter-spacing:1px;
+	height:25px;
+	word-break: break-all;
+	word-wrap: break-all;
+	/* word-break:break-all;white-space: nowrap; */
+}
+#row .firTD{text-align:left;width:500px}
+.etitle{display:inline-block;width:100%}
+/**displaytable样式结束**/
+
+
+
+.ys{}

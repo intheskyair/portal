@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,   
+form,input,textarea,p,blockquote,th,td {   
+    padding: 0;   
+    margin: 0;  
+   /*  font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53, Arial, Helvetica, sans-serif;  */
+}   
+img {   
+    border: 0;   
+}   
+address,caption,cite,code,dfn,em,strong,th,var {   
+    font-weight: normal;   
+    font-style: normal;   
+}   
+ol,ul {   
+    list-style: none;   
+}   
+caption,th {   
+    text-align: left;   
+}   
+h1,h2,h3,h4,h5,h6 {   
+    font-weight: normal;   
+    font-size: 100%;   
+}   
+q:before,q:after {   
+    content:'';   
+}   
+abbr,acronym { border: 0;   
+}
+a{blr: expression(this.onFocus=this.close());blr: expression(this.onFocus=this.blur());text-decoration:none} 
+a:focus {-moz-outline-style: none;outline: none;}
+.fl{float:left}
+.fr{float:right}
+.underLine{text-decoration:underline}
+.headStyle{text-align:center;font-size:28px;padding:20px 0}
+#content{min-width:900px;padding:10px;font-family:\5B8B\4F53, Arial, Helvetica, sans-serif;}
+.leftBar{width:20%;margin:10px;min-width:200px}
+#accordion{width:220px;}
+#accordion button{margin:5px 0}
+.centerTab{width:100%;border-collapse:collapse;}
+.centerTab td{border:1px solid #E5E5E5;}
+.firstTd{width:14%;min-width:200px;padding:10px;}
+.secondTd{padding:20px 0 0 20px;}

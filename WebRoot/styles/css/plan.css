@@ -1,0 +1,349 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+}
+
+.gztlb a {
+	color: #1794e4
+}
+
+table {
+	width:98%;
+	text-align: center;
+	margin: auto;
+}
+font {
+    float: left;
+}
+.table-all {
+	height: auto;
+	width: 98%;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.table-all td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	height: 28px;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+.table01 {
+	height: 500px;
+	width: 1000px;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.table01 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	height: 28px;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+.btt {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 35px;
+}
+
+.srk {
+	width: 90%;
+	border: none;
+	text-align: center;
+	font-size: 12px
+}
+
+.srk1 {
+	/* width: 90%;
+	border: none;
+	text-align: center;
+	font-size: 16px */
+}
+
+.table02 {
+	/* height: 800px; */
+	width: 700px;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+	font-family: 微软雅黑
+}
+
+.table02 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	height: 28px;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+span {
+	font-weight: bold
+}
+
+.table04 {
+	height: 800px;
+	width: 700px;
+	background-c olor: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+	font-family: 微软雅黑
+}
+
+.table04 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	height: 28px;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+.table05 {
+	height: 500px;
+	width: 700px;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.table05 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+.dwb {
+	height: 300px;
+	/*width: 95%;*/
+	border: 1px solid #fff;
+	padding: 5px;
+	font-size: 12pxtext-align:left;
+	overflow-y: visible;
+}
+
+.dwb1 {
+	height: 150px;
+	width: 98%;
+	border: 1px solid #fff;
+	padding: 5px;
+	font-size: 12px
+}
+
+.nyr {
+	width:80px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	border: 0px
+}
+.nyr_2 {
+	width:200px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	border: 0px
+}
+.nyr_1 {
+	width: 200px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	border: 0px
+}
+
+.p-nyr {
+	height: 30px;
+	text-align: right
+}
+
+.table06 {
+	height:500px;
+	width: 98%;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.table06 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+.table07 {
+	height: 900px;
+	width: 98%;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.table07 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+.gzt {
+	width: 100%;
+	height: 600px;
+	font-size: 12px;
+}
+
+.gzt td {
+	width: 50%;
+	    vertical-align: top;
+}
+
+.gztlb {
+	padding: 0px;
+	list-style: none;
+	border: 1px solid #ccc;
+	height: auto;
+    overflow: hidden;
+}
+
+.gztlb-bt {
+	background-color: #D8D8D8;
+	text-align: left;
+	padding-left: 10px;
+	color: #1794e4;
+	font-size: 15px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	font-family: 微软雅黑
+}
+
+.gztlb li {
+	height: 30px;
+	line-height: 30px;
+ 	font-weight: bold; 
+	text-align: left;
+	padding-left: 10px;
+	font-size: 12px;
+}
+
+.gzt-img {
+	border: 0px;
+	height: 12px;
+	vertical-align: middle
+}
+
+.h50 {
+	height:55px!important;
+}
+
+.selectBtn {
+	color: white;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	borde-radius: 8px;
+	background-color: #31b0d5;
+	width: 80px;
+	line-height: 1.5;
+	padding: 5px;
+	outline: none;
+	cursor: pointer;
+}
+
+.table09 {
+	height: 800px;
+	width: 98%;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.table09 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	height: 28px;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold
+}
+
+.table10 {
+	height: 800px;
+	width: 98%;
+	background-color: #fff;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.table10 td {
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	height: 28px;
+	color: #666;
+	vertical-align: middle;
+	color: #000;
+	font-size: 12px font-weight:bold;
+	text-align: center
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	background-color: #FE6C00!important;
+}
+
+.one_type{
+    margin-left: auto;
+    width:45%;
+    margin: 10px;
+
+}
+.one_type_top {
+    width:70%;
+    height: 32px;
+    border-bottom: 1px #ccc solid;
+}
+.one_type_name {
+    height: 100%;
+    border: 0px red solid;
+    text-align: left;
+    line-height: 35px;
+    padding-left: 10px;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.one_type a {
+ /*    color: #000; */
+    font-family: "微软雅黑";
+}
+  
+
+ 

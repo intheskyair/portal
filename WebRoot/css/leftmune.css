@@ -1,0 +1,78 @@
+body {
+	margin:0 0 0 0; padding:0 0 0 0;
+	text-decoration: none;
+	font-family: '微软雅黑',Arial, Sans-Serif;
+}
+
+td {
+	font-family: '微软雅黑',Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+th {
+	font-family: '微软雅黑',Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+.scroll {
+	height: 500px;
+	overflow-y: scroll;
+	scroll-face-color: #E0E9F1;
+	SCROLLBAR-3DLIGHT-COLOR: #BDC6E7;
+	SCROLLBAR-ARROW-COLOR: #3D6895;
+	SCROLLBAR-TRACK-COLOR: #fff;
+	SCROLLBAR-DARKSHADOW-COLOR: #fff;
+	SCROLLBAR-HIGHLIGHT-COLOR: #fff;
+	SCROLLBAR-SHADOW-COLOR: #808080;
+}
+
+img {
+	border: 0px;
+}
+
+a:link,a:visited,a {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/**左边菜单**/
+.dtree {
+	white-space: nowrap;border-right:1px solid #018A9D;
+}
+.dtree img {
+	margin-right:10px;border:0px;
+}
+.dtree a.node,.dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+.dtree .clip {
+	overflow: hidden;
+}
+.dtree .grade1 {
+	height: 28px;
+	border-bottom: 1px solid #6e9bc2;
+	padding: 5px 0px 2px 20px;
+	cursor: pointer;	
+}
+.dtree .grade2 {
+	padding: 5px 2px 5px 30px;
+	border-bottom:1px dashed #018A9D;
+	background-color:#EEF3F3;	
+}
+.dtree .grade2 a{
+	background-color:#EEF3F3;
+	padding: 5px 2px 5px 0px;	
+}
+.dtree .grade2 a:hover{
+	background-color:#EEF3F3;	
+	color:#C96D00;
+}
+
+
+

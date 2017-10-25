@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="../css/compart/common.css" />
+<div style="overflow: hidden;">
+	<p class="btt">局机关中层干部使用期满民主测评表</p>
+	<table class="table02" cellpadding="0" cellspacing="0">
+		 <tr class="blue_y">
+			 <td rowspan="2" class="name_td">姓名</td>
+			 <td rowspan="2" class="eval_td_type1">职务</td>
+			 <td colspan="3">综合评价</td>
+			 <td colspan="2">任用建议</td>
+		 </tr>
+	 <tr class="title_t blue_y">
+			 <td class="mzbg4_w1">胜任</td>
+			 <td class="mzbg4_w2">基本胜任</td>
+			 <td class="mzbg4_w1">不胜任</td>
+			 <td class="mzbg4_w1">任用</td>
+			 <td class="mzbg4_w1">不任用</td>
+		 </tr>
+	</table>
+</div>
